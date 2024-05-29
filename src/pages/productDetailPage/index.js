@@ -69,10 +69,11 @@ function ProductDetailPage(props) {
                 })
                     .then(res=>{
                         console.log(res.data);
-                        setSuccessMess('Add to cart is success!')
+                        setSuccessMess({success: true,mess: 'Add to cart is success!'});
                     })
                     .catch(err=>{
                         console.log(err.message);
+                        setSuccessMess({success: false,mess: 'Add to cart is fail!'});
                     })
             }
 
@@ -150,7 +151,8 @@ function ProductDetailPage(props) {
             <Header/>
             <div className="container">
                 <div className="product-detail">
-                    {successMess && <div className="text-center py-8 bg-success text-white">{successMess}</div>}
+                    {successMess && successMess.success==true && <div className="text-center py-8 text-success">{successMess.mess}</div>}
+                    {successMess && successMess.success==false && <div className="text-center py-8 text-danger">{successMess.mess}</div>}
                     <div className="location">
                         <span>
                             Home > Shop > Men > T-shirts

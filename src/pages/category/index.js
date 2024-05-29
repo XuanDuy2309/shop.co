@@ -48,15 +48,19 @@ function CategoryPage(props) {
     }
 
     const getListCate=()=>{
-        axios.get("https://fakestoreapi.com/products/categories")
-            .then(res=>{
-                if(Array.isArray(res.data)){
-                    setListCate(res.data);
-                }
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        try {
+            axios.get("https://fakestoreapi.com/products/categories")
+                .then(res=>{
+                    if(Array.isArray(res.data)){
+                        setListCate(res.data);
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        } catch (err){
+            console.log(err.message);
+        }
     }
 
     const handleSelectSize =(event)=>{
