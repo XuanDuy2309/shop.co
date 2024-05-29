@@ -1,0 +1,32 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+.text-danger {
+  color: red !important;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-white {
+  color: white;
+}
+
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.bg-success {
+  background-color: rgba(30, 147, 15, 0.6);
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+

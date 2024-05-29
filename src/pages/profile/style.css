@@ -1,0 +1,50 @@
+.profile-wrapper {
+    width: 96%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-title{
+    padding-top: 24px;
+    border-top: 1px solid #ccc;
+}
+
+.profile-title span {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.profile-wrapper ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+}
+
+.profile-wrapper ul li:first-child{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.logout-btn {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.logout-btn button{
+    width: 240px;
+    height: 48px;
+    border: none;
+    border-radius: 62px;
+    color: white;
+    background-color: black;
+}
+
+.logout-btn button:hover {
+    cursor: pointer;
+    opacity: .8;
+}

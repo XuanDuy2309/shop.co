@@ -1,0 +1,33 @@
+.list-products {
+}
+
+.list-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.list-title span{
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 36px 12px;
+}
+
+.list-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 72px;
+}
+
+@media (max-width: 1023px) {
+    .products{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

@@ -1,0 +1,13 @@
+.btn-viewAll {
+    width: 218px;
+    height: 52px;
+    border-radius: 50px;
+    border: .5px solid;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+.btn-viewAll:hover {
+    cursor: pointer;
+    opacity: .8;
+}
