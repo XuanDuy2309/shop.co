@@ -18,7 +18,7 @@ function Header(props) {
             <div className="wrapper" hidden={isCloseNotifi}>
                 <div className="notifi">
                     <div className="notifi-content">
-                        <span>Sign up and get 20% off to your first order. <a href="/">Sign Up Now</a></span>
+                        <span>Sign up and get 20% off to your first order. <a onClick={()=>{navigate('/shop.co')}}>Sign Up Now</a></span>
                     </div>
 
                     <div className="ic-close" onClick={()=>{
@@ -36,7 +36,7 @@ function Header(props) {
                     </label>
                     <div
                         className="logo"
-                        onClick={()=>{navigate('/')}}
+                        onClick={()=>{navigate('/shop.co')}}
                         hidden={isOpenSearchMobile}
                     >
                         <img src={images.logo} alt=""/>

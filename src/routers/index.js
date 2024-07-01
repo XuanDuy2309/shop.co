@@ -7,7 +7,7 @@ import Profile from "../pages/profile";
 import RegisterPage from "../pages/registerPage";
 
 export const publicRouters = [
-    {path: '/', component: Homepage},
+    {path: '/shop.co', component: Homepage},
     {path: '/product/:productId', component: ProductDetailPage},
     {path: '/category/:cateName', component: CategoryPage},
     {path: '/cart', component: Cart},

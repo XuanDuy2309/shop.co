@@ -56,7 +56,7 @@ function LoginPage(props) {
                 if (response){
                     localStorage.setItem('token',response.data["token"]);
                     // console.log(response.data);
-                    navigate('/');
+                    navigate('/shop.co');
                     // const token = response.data['token'];
                     // const parts = token.split('.')
                     // // console.log(parts);
@@ -75,7 +75,7 @@ function LoginPage(props) {
                     <img
                         src={images.logo}
                         alt=""
-                        onClick={()=>{navigate('/')}}
+                        onClick={()=>{navigate('/shop.co')}}
                     />
                 </div>
 

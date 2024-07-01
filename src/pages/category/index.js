@@ -17,6 +17,7 @@ function CategoryPage(props) {
 
     const listSizes = useRef();
     const filters = useRef();
+    const filter = useRef();
 
     const navigate = useNavigate();
 
@@ -64,10 +65,17 @@ function CategoryPage(props) {
     }
 
     const handleSelectSize =(event)=>{
-        for (let item of listSizes.current.children){
-            item.classList.remove('selected');
+        // for (let item of listSizes.current.children){
+        //     item.classList.remove('selected');
+        // }
+        // console.log(event.currentTarget.classList.contains('selected'));
+        if (event.currentTarget.classList.contains('selected')){
+            event.currentTarget.classList.remove('selected');
         }
-        event.currentTarget.classList.add('selected');
+        else {
+            event.currentTarget.classList.add('selected');
+        }
+        // console.log(event.currentTarget.classList);
     }
 
     const handleChangePrice =(event) => {
@@ -109,6 +117,8 @@ function CategoryPage(props) {
         }
         getListCateProducts();
         getListCate();
+        // console.log(filter.current);
+
     },[listCateProducts]);
     return (
         <div>
@@ -137,7 +147,7 @@ function CategoryPage(props) {
                                         <img
                                             src={images.icDropRight}
                                             alt=""
-
+                                            ref={filter}
                                         />
                                     </div>
 
@@ -167,7 +177,11 @@ function CategoryPage(props) {
                             <div className="filter">
                                 <div className="filter-title">
                                     <span>Price</span>
-                                    <img src={images.icDropUp} alt=""/>
+                                    <img
+                                        src={images.icDropUp}
+                                        alt=""
+                                        ref={filter}
+                                    />
                                 </div>
                                 
                                 <div className="filter-type">
