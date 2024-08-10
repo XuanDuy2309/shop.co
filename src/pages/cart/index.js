@@ -137,7 +137,7 @@ function Cart(props) {
                     {(getUserId()==null) && <div className='text-center py-8 text-danger'>pls login to see your cart!</div>}
 
                     <div className="location">
-                        <span>Home > Cart</span>
+                        <span>{"Home > Cart"}</span>
                     </div>
 
                     <div className="cart-title">

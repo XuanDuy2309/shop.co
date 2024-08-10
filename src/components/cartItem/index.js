@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './style.css';
 import images from "../../assets/images";
+import { useNavigate } from 'react-router-dom';
 
 function CartItem({
     onChangeQuantity,
@@ -9,6 +10,8 @@ function CartItem({
 
                   }) {
     const [quantityItem, setQuantityItem] = useState(item.quantity);
+
+    const navi = useNavigate();
 
     const handleMinusProduct=()=>{
         if (quantityItem>1){
@@ -30,7 +33,7 @@ function CartItem({
             </div>
             <div className="item-about">
                 <div className="item-name">
-                    <span>{item.title}</span>
+                    <span onClick={()=>navi(`/product/${item.id}`)}>{item.title}</span>
                     <img
                         src={images.icTrash}
                         alt=""
